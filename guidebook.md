@@ -757,3 +757,4 @@ For the purpose of this lab, we'll create a subflow with 2 approval steps. The f
 1. Set **Condition:** to "Group approves.
 1. Drag _Approval State_ from **Step 1- Ask for Approval** to **Condition 1:**. Select "is" and "Approved".
 
+    ![Subflow](Images/002_SNAGIT.gif)
