@@ -381,7 +381,7 @@ The goal of this lab exercise is to build the form for your application. You wil
 1. Click the Lists icon (☰) on the left.
 1. Navigate to Expense reports> All and click New.
 
-    > Note: 
+    > Note:
     If a blue display message appears, use the "X" to close it in order to display the Save button.
 1. Click Save.
 1. You should now see the Items list as shown in the image below.
@@ -392,7 +392,7 @@ The goal of this lab exercise is to build the form for your application. You wil
 
 ### Goal
 
-The goal of this lab exercise is to create a simple workflow on your application. You will add create the trigger for the workflow, add a few actions and test the workflow.
+The goal of this lab exercise is to create a simple workflow on your application. You will add create the trigger for the workflow, include the approval subflow, add a few actions, and test the workflow.
 
 1. In Studio Create New Application File, Flow and Click Create.
 
@@ -421,84 +421,79 @@ The goal of this lab exercise is to create a simple workflow on your application
 
     ![Flow](Images/069_NCAIM.png "Flow")
 
-1. Add the Condition you want to use for this trigger by Clicking on the + Sign “Add filter”: State > changes to > Approval
+1. Add the Condition you want to use for this trigger by Clicking on the + Sign “Add filter”: **State \> changes to \> Approval**
 
     ![Flow](Images/070_NCAIM.png "Flow")
 
-1. Select “For each unique change”, as we want this to occur anytime this record changes and click Done
+1. Select “For each unique change”, as we want this to occur anytime this record changes and confirm with **Done**.
 
     ![Flow](Images/071_NCAIM.png "Flow")
 
-### Create the actions
+### Include subflow and create actions
 
-In this exercise we will add two separate actions
-
-  * Update Records
-  * Approval Action
-
-1. Click the + sign to add the Action for this Flow.
+1. Click the **(+)** sign to add a _Subflow_.
+1. Choose "2 step group approval".
 
     ![Flow](Images/072_NCAIM.png "Flow")
 
-1. Click on Action
+1. Drag the **Data pill** "Expense Report Record" to the "Task" field in the Subflow.
 
     ![Flow](Images/073_NCAIM.png "Flow")
-
-1. Select Ask Approval Action
-
     ![Flow](Images/074_NCAIM.png "Flow")
 
-1. Drag the Expense Record from the right pane to the Record field
+1. Confirm with **Done**.
+1. Click the **(+)** sign to add _Flow Logic_.
+1. Choose **If**.
+1. Set **Condition:** to "Approved".
+1. Drag the **Data pill** "1 - 2 step group approval \> Approval Status" to **Condition 1:**.
 
     ![Flow](Images/075_NCAIM.png "Flow")
-<!-- CHANGE TO INCLUDE SUBFLOW -->
-1. In the Rules Section for Approve, select Approve When Anyone Approves 
-1. Use the Picker to Navigate to Trigger **Record \> Expense Record \> Opened By \> Manager**
+
+1. Set **Approval Status \> is \> Approved**.
 
     ![Flow](Images/076_NCAIM.png "Flow")
 
-1. Click add another rule set and apply the same rule for Reject
+1. Confirm with **Done**.
+1. Below the if branch, click the small **(+)** sign to add _Flow Logic_.
 
     ![Flow](Images/077_NCAIM.png "Flow")
 
-1. Click Done
-1. Click the Flow Logic and Select If
+1. Click on **Action**, filter for "Update", and choose **Update Record**
 
-1. Give the condition the name Approved
-1. Drag the Approval State Record to Condition 1 field and set condition to Is  Approved
- 
+    ![Flow](Images/078_NCAIM.png "Flow")
 
-1. Click the small + (be sure not to take the big one at the bottom)
+1. Drag the **Data pill** "Expense Report Record" to the "Record" field in the Action.
+1. Click **+ Add Field Value**.
+1. Select a field: **State**.
+1. Select a choice: **Approved**.
+1. Confirm with **Done**.
 
- 
- 
-1. Select the Update Record Action, found in ServiceNow Core category
+    ![Flow](Images/079_NCAIM.png "Flow")
 
- 
+1. In the main thread of the flow, click the **(+)** sign to add _Flow Logic_.
 
-1. Drag the Expense Report Record to the record field
-1. Click Add Field Value button and set State to Approved
+    ![Flow](Images/080_NCAIM.png "Flow")
 
- 
-1. Click Done and Save to save changes
- 
-1. Click the Large +, Flow Logic and then Else if
- 
+1. Choose **Else If**.
+1. Set **Condition:** to "Rejected".
+1. Drag the **Data pill** "1 - 2 step group approval \> Approval Status" to **Condition 1:**.
+1. Set **Approval Status \> is \> Rejected**.
+1. Confirm with **Done**.
 
+    ![Flow](Images/081_NCAIM.png "Flow")
 
-1. Fill in the fields as below, Condition: Rejected, Conditions state 1: Rejected
- 
+1. Repeat the above steps with the option "Rejected":
+1. Below the else if branch, click the small **(+)** sign to add _Flow Logic_.
+1. Click on **Action**, filter for "Update", and choose **Update Record**
+1. Drag the **Data pill** "Expense Report Record" to the "Record" field in the Action.
+1. Click **+ Add Field Value**.
+1. Select a field: **State**.
+1. Select a choice: **Rejected**.
+1. Confirm with **Done**.
+1. The complete flow should look like this:
 
- 
-1. Repeat the steps to add an update action, by clicking the small + button and select the Update Record again, fill in as below
+    ![Flow](Images/082_NCAIM.png "Flow")
 
- 
-
-
-1. Click done and save
- 
-
- 
 ### Testing the created workflow
 
 1. Click on the Test button to test your workflow:
@@ -685,7 +680,7 @@ IMPORTANT: Make note of the expense report record number you updated!
 
 ### (OPTIONAL) Create Approval subflow
 
-For the purpose of this lab, we'll create a subflow with 2 approval steps. The first is a group approval, every member of the group will receive an approval record, as soon as one approves, the flow will proceed and create an approval record for the group's manager. The result will be assigned to the subflow outputs, so it can be used in the parent flow.
+For the purpose of this lab, we'll create a subflow with 2 approval steps. The first is a simple manager approval, the approval will be assigned to the manager of the person that created the Expense report (Opened by). Once the manager has approved, a second approval will be assigned to a group. Every member of the group will receive an approval record. As soon as one member of the group approves, the result will be assigned to the subflow output. If the manager has not approved, this result will then be assigned to the output. This output can be used in the parent flow.
 
 > **What is a subflow?**  
 > A subflow is a sequence of reusable actions that can be started from a flow, subflow, or script. Define inputs and outputs to pass data to and from the subflow.  
@@ -741,20 +736,66 @@ For the purpose of this lab, we'll create a subflow with 2 approval steps. The f
 
     ![Subflow](Images/133_NCAIM.png)
 
-1. Drag the **data pill** "Task" from the Subflow Inputs on the right into the field "Record".
+1. Drag the **Data pill** "Task" from the Subflow Inputs on the right into the field "Record".
 1. Set the **Rules** to "Approve or Reject" When: "Anyone approves or rejects".
-1. From the icon with 2 people choose the Assignment Group "Service Desk".
-1. Confirm everything with **Done**.
-1. (Optional) Add a comment "Group Approval" to approval step.
+1. From the pill picker next to the approval conditions navigate to **Subflow Inputs \> Task \> Opened by \> Manager**.
+1. Confirm with **Done**.
+1. (Optional) Add a comment "Manager Approval" to approval step.
 
-    ![Subflow](Images/001_SNAGIT.gif)
+    ![Subflow](Images/001_NCAIM.gif)
 
 1. Click the **(+)** sign to add _Flow Logic_ to this subflow.
 1. Choose **If**.
 
     ![Subflow](Images/134_NCAIM.png)
 
-1. Set **Condition:** to "Group approves.
+1. Set **Condition:** to "Manager approves".
 1. Drag _Approval State_ from **Step 1- Ask for Approval** to **Condition 1:**. Select "is" and "Approved".
+1. Confirm with **Done**.
 
-    ![Subflow](Images/002_SNAGIT.gif)
+    ![Subflow](Images/135_NCAIM.png)
+
+1. Click the **(+)** sign below the **if** to add an _Action_ in this branch.
+
+    ![Subflow](Images/136_NCAIM.png)
+
+1. Click on Action
+1. Select **Ask For Approval** Action
+1. Drag the **Data pill** "Task" from the Subflow Inputs on the right into the field "Record".
+1. Set the **Rules** to "Approve or Reject" When: "Anyone approves or rejects".
+1. From the icon with 2 people choose the Assignment Group "Service Desk".
+
+    ![Subflow](Images/137_NCAIM.png)
+
+    ![Subflow](Images/138_NCAIM.png)
+
+1. Confirm with **Done**.
+1. (Optional) Add a comment "Group Approval" to approval step.
+1. Below the group approval, click the **(+)** sign to add _Flow Logic_.
+1. Choose **Assign Subflow Outputs**.
+
+    ![Subflow](Images/139_NCAIM.png)
+
+1. Click on the **(+)** sign on the right, select output "Approval Status" and from the pill picker, choose **2.1 - Ask for Approval \> Approval State**.
+
+    ![Subflow](Images/140_NCAIM.png)
+
+    ![Subflow](Images/141_NCAIM.png)
+
+1. Confirm with **Done**.
+1. (Optional) Set step comment to "Assign group approval state to output" to Assign output step.
+1. In the main thread of the flow, click the **(+)** sign to add _Flow Logic_.
+1. Choose **Assign Subflow Outputs**.
+
+    ![Subflow](Images/142_NCAIM.png)
+
+1. Click on the **(+)** sign on the right, select output "Approval Status" and from the pill picker, choose **1 - Ask for Approval \> Approval State**.
+
+    ![Subflow](Images/143_NCAIM.png)
+
+1. Confirm with **Done**.
+1. (Optional) Set step comment to "Assign manager approval state to output" to Assign output step.
+1. (**Save** and) **Publish** the subflow.
+1. The complete Subflow should look like this:
+
+    ![Subflow](Images/144_NCAIM.png)
