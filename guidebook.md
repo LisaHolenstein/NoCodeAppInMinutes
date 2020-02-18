@@ -490,6 +490,7 @@ The goal of this lab exercise is to create a simple workflow on your application
 1. Select a field: **State**.
 1. Select a choice: **Rejected**.
 1. Confirm with **Done**.
+1. **Save** the flow.
 1. The complete flow should look like this:
 
     ![Flow](Images/082_NCAIM.png "Flow")
