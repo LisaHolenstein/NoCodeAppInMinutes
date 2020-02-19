@@ -433,6 +433,8 @@ The goal of this lab exercise is to create a simple workflow on your application
 
 ### Include subflow and create actions
 
+The approval subflow should already exist in your lab instance. If you're doing this lab in a **Personal Developer Instance (PDI)**, you'll have to either import the update set or create the subflow yourself. You'll find the instructions further down in the _Challenge exercise_ part of this lab guide.
+
 1. Click the **(+)** sign to add a _Subflow_.
 1. Choose **2 step group approval**.
 
