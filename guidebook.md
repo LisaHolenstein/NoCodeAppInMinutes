@@ -398,50 +398,50 @@ The goal of this lab exercise is to create a simple workflow on your application
 
 1. In Studio Create New Application File, Flow and click **Create**.
 
-    ![Flow](Images/064_NCAIM.png "Flow")
+    ![Flow](Images/064_NCAIM.png)
 
 1. Select **Flow** and click **Next**
 
-    ![Flow](Images/065_NCAIM.png "Flow")
+    ![Flow](Images/065_NCAIM.png)
 
 1. Change the Flow properties and add the Name: **Approval**.
 
-    ![Flow](Images/066_NCAIM.png "Flow")
+    ![Flow](Images/066_NCAIM.png)
 
 1. Click on **Submit** to save the changes.
 
-    ![Flow](Images/067_NCAIM.png "Flow")
- 
+    ![Flow](Images/067_NCAIM.png)
+
 ### Set the trigger
 
 1. Click on the **(+)** sign to open the options for setting the trigger
 1. Select **Created or Updated**
 
-    ![Flow](Images/068_NCAIM.png "Flow")
+    ![Flow](Images/068_NCAIM.png)
 
 1. Select the _Expense report_ Table
 
-    ![Flow](Images/069_NCAIM.png "Flow")
+    ![Flow](Images/069_NCAIM.png)
 
 1. Add the _Condition_ you want to use for this trigger by clicking on the **(+)** sign _Add filter_: **State \> changes to \> Approval**
 
-    ![Flow](Images/070_NCAIM.png "Flow")
+    ![Flow](Images/070_NCAIM.png)
 
 1. Select **For each unique change**, as we want this to occur anytime this record changes and confirm with **Done**.
 
-    ![Flow](Images/071_NCAIM.png "Flow")
+    ![Flow](Images/071_NCAIM.png)
 
 ### Include subflow and create actions
 
 1. Click the **(+)** sign to add a _Subflow_.
 1. Choose **2 step group approval**.
 
-    ![Flow](Images/072_NCAIM.png "Flow")
+    ![Flow](Images/072_NCAIM.png)
 
 1. Drag the **Data pill** "Expense Report Record" to the "Task" field in the Subflow.
 
-    ![Flow](Images/073_NCAIM.png "Flow")
-    ![Flow](Images/074_NCAIM.png "Flow")
+    ![Flow](Images/073_NCAIM.png)
+    ![Flow](Images/074_NCAIM.png)
 
 1. Confirm with **Done**.
 1. Click the **(+)** sign to add _Flow Logic_.
@@ -449,20 +449,20 @@ The goal of this lab exercise is to create a simple workflow on your application
 1. Set **Condition:** to _Approved_.
 1. Drag the **Data pill** "1 - 2 step group approval \> Approval Status" to **Condition 1:**.
 
-    ![Flow](Images/075_NCAIM.png "Flow")
+    ![Flow](Images/075_NCAIM.png)
 
 1. Set **Approval Status \> is \> Approved**.
 
-    ![Flow](Images/076_NCAIM.png "Flow")
+    ![Flow](Images/076_NCAIM.png)
 
 1. Confirm with **Done**.
 1. Below the _if branch_, click the small **(+)** sign to add _Flow Logic_.
 
-    ![Flow](Images/077_NCAIM.png "Flow")
+    ![Flow](Images/077_NCAIM.png)
 
 1. Click on **Action**, filter for "Update", and choose **Update Record**
 
-    ![Flow](Images/078_NCAIM.png "Flow")
+    ![Flow](Images/078_NCAIM.png)
 
 1. Drag the **Data pill** "Expense Report Record" to the "Record" field in the Action.
 1. Click **+ Add Field Value**.
@@ -470,11 +470,11 @@ The goal of this lab exercise is to create a simple workflow on your application
 1. Select a choice: **Approved**.
 1. Confirm with **Done**.
 
-    ![Flow](Images/079_NCAIM.png "Flow")
+    ![Flow](Images/079_NCAIM.png)
 
 1. In the main thread of the flow, click the **(+)** sign to add _Flow Logic_.
 
-    ![Flow](Images/080_NCAIM.png "Flow")
+    ![Flow](Images/080_NCAIM.png)
 
 1. Choose **Else If**.
 1. Set **Condition:** to "Rejected".
@@ -482,7 +482,7 @@ The goal of this lab exercise is to create a simple workflow on your application
 1. Set **Approval Status \> is \> Rejected**.
 1. Confirm with **Done**.
 
-    ![Flow](Images/081_NCAIM.png "Flow")
+    ![Flow](Images/081_NCAIM.png)
 
 1. Repeat the above steps with the option "Rejected":
 1. Below the else if branch, click the small **(+)** sign to add _Flow Logic_.
@@ -495,44 +495,53 @@ The goal of this lab exercise is to create a simple workflow on your application
 1. **Save** the flow.
 1. The complete flow should look like this:
 
-    ![Flow](Images/082_NCAIM.png "Flow")
+    ![Flow](Images/082_NCAIM.png)
 
 ### Testing the created workflow
 
 1. Click on the Test button to test your workflow:
 
- 
+    ![Flow](Images/086_NCAIM.png)
 
-1. Click on the + sign to create a new record so you can Test the flow.
+1. Click on the **(+)** sign to create a new record so you can Test the flow.
 
-1. This opens the Request form for the Expense report. Add a Short Description, make sure to change Opened by to “David Loo” and Click Submit
- 
- 
+    ![Flow](Images/087_NCAIM.png)
 
-1. Click Run Test and wait for the Flow to be executed. The message “Flow has been executed. To view the flow, click here.”. Click on the Green link.
+1. This opens the Request form for the Expense report. Add a _Short Description_, make sure to change _Opened by_ to **David Loo** and click **Submit**.
 
- 
+    ![Flow](Images/088_NCAIM.png)
 
-1. Below you will see all the details for the Flow. 
+1. Click **Run Test** and wait for the Flow to be executed. The message “Flow has been executed. To view the flow, click here.”. Click on the **Green link**.
 
-Note:
-The state is waiting, due to the requested approval
- 
-1. Click open Current Record (twice) to go to the Expense record 
+    ![Flow](Images/089_NCAIM.png)
 
- 
- 
-1. Click open Current Record (twice) to go to the Expense record 
-1. Go to the approver related list right click on the name and select approve
- 
-Note:
-The approval was sent to the manager of David Loo, by the flow we created. Because we are logged in as administrator we can overwrite the approval. Normally this can be done via email or mobile app.
+1. Below you will see all the details for the Flow.
 
+    > Note:  
+    > The state is waiting, due to the requested approval
+
+1. Click **Open Current Record** and **Open Record** to go to the Expense record.
+
+    ![Flow](Images/090_NCAIM.png)
+
+1. Go to the _Approvers_ related list **right click** on _Requested_ and select **Approve**.
+
+    ![Flow](Images/091_NCAIM.png)
+
+    > Note:  
+    > The approval was sent to the manager of David Loo, by the flow we created. Because we are logged in as administrator we can overwrite the approval. Normally this can be done via email or mobile app.
+
+1. Reload the form (or _Approvers_ related list) to see that the second approval step, the group approval has been created. Check out the flow window, open the subflow with the grey triangle to see the update.
+
+    ![Flow](Images/083_NCAIM.png)
+
+1. **Right click** again on _Requested_ in Beth Anglin's row and **Approve** the record.
+
+    ![Flow](Images/084_NCAIM.png)
 
 1. The ticket state should now change to approved, and this change is shown in the activities. If not reload the page
 
- 
-
+    ![Flow](Images/092_NCAIM.png)
 
 1. Refresh the flow history, review it and make sure you understand the steps.
 
@@ -542,46 +551,70 @@ The approval was sent to the manager of David Loo, by the flow we created. Becau
 
 The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item and expense report tables in workspace interface.
 
-Add the Items List to the Classic UI Expense Report Form
+### Add the Items List to the Classic UI Expense Report Form
 
-1. Back in Studio, click Layout Form on the Expense report table definition.
- 
+1. Back in _Studio_, click **Layout Form** on the _Expense report table definition_.
+
+    ![Form](Images/093_NCAIM.png)
+
 1. Scroll down the Available list on the left and locate the entry **Item -\> Expense report**.
- 
-1. Use the \> to move it to the Selected list on the right.
- 
-1. Now use the up and down arrows to place it between Description and Activities (filtered).
- 
-1. Click Save.
+
+    ![Form](Images/094_NCAIM.png)
+
+1. Use the **\>** to move it to the Selected list on the right.
+
+    ![Form](Images/095_NCAIM.png)
+
+1. Now use the up and down arrows to place it between _Description_ and _Activities (filtered)_.
+
+    ![Form](Images/096_NCAIM.png)
+
+1. Click **Save**.
 1. Validate your work by going to the classic UI browser tab.
 1. Navigate to **Expense report \> Open**.
 1. Locate and click any record number in the list. Your form should appear similar to the following image.
- 
+
+    ![Form](Images/097_NCAIM.png)
+
 ### Configure Item Form Layout
 
-1. From Studio, open the Item table record.
-1. Click the Design Form link.
-1. Arrange the fields similar to the image below and click Save.
- 
-1. Create a new view called workspace the same way you did for the Expense report form design.
-    1. Use the dropdown next to Default view
-    1. Click New.
-    1. Enter the view name workspace.
-    1. Click OK.
-    1. Click Save.
+1. From _Studio_, open the **Item table** record.
+1. Click the **Design Form** link.
+1. Arrange the fields similar to the image below and click **Save**.
 
-1. Validate your work in Workspace by going to **Lists \> Items \> All** and open a record. Your form should appear similar to the following:
- 
+    ![Form](Images/098_NCAIM.png)
+
+1. Create a new view called **workspace** the same way you did for the _Expense report_ form design.
+    1. Use the dropdown next to _Default view_
+    1. Click **New**.
+    1. Enter the view name **workspace**.
+    1. Click **OK**.
+    1. Click **Save**.
+
+1. Validate your work in _Workspace_ by going to **Lists \> Items \> All** and open a record. Your form should appear similar to the following:
+
+    ![Form](Images/099_NCAIM.png)
+
 ### Configure the Items List Layout in Workspace
 
-1. Next, let's clean up the default list layout for the items in Workspace. Begin by going to the classic UI and navigating to **Workspace \> List Filters**.
- 
-1. Using the list filter, locate the records with Category Items.
- 
-1. Click the Run button.
-1. Open the record with the list name All.
- 
-1. Click the lock next to the Columns field.
+1. Next, let's clean up the default list layout for the items in _Workspace_. Begin by going to the _classic UI_ and navigating to **Workspace Experience -\> Agent Workspace Guided Setup -\> Lists -\> Create filtered lists**.
+
+    ![Workspace](Images/100_NCAIM.png)
+
+1. Click **Configure** under _Create filtered lists_.
+
+    ![Workspace](Images/085_NCAIM.png)
+
+1. Using the list filter, locate the records with **Category Items**.
+
+    ![Workspace](Images/101_NCAIM.png)
+
+1. Click the **Run** button.
+1. Open the record with the list name **All**.
+
+    ![Workspace](Images/102_NCAIM.png)
+
+1. Click the **lock** next to the _Columns_ field.
 1. Arrange the items in the _Selected_ column using the left/right and up/down arrows to reflect the list below:
     * Transaction date
     * Account
@@ -593,40 +626,26 @@ Add the Items List to the Classic UI Expense Report Form
     * Receipt status
     * Vendor name
 
- 
-Your columns should now look like this:
- 
-1. Click Update.
+    Your columns should now look like this:
+
+    ![Workspace](Images/103_NCAIM.png)
+
+1. Click **Update**.
 1. Validate your work by going to workspace and refreshing your browser window.
-Note, do not use the list refresh icon. You should see your new list layout take effect.
- 
 
- 
-## Challenge exercises:
-### Add a Module to Navigate to the Workspace
-1. In Studio, click the Create Application File link.
-1. Go to **Navigation \> Module** and click **Create**.
- 
-1. Fill in the form with the following names and values:
+    > Note, do not use the list refresh icon. You should see your new list layout take effect.
 
-| Name | Value |
-| --- | --- |
-| Title | Workspace |
-| Application menu | Expense |
-| Order | 0 |
-| Link type | URL (from Arguments) |
-| Arguments | /now/workspace/expense/list (Or if you imported the app use: /x/myapps/workspace/expense/list) |
-| Window name | _blank |
- 
+    ![Workspace](Images/104_NCAIM.png)
 
-1. Click Submit.
-1. Validate your work by refreshing the Classic UI browser tab and navigating to **Expense \> Workspace**.
- 
+## Challenge exercises
+
 ### Configure the Classic UI Expense Report List Layout
 
 1. In the classic UI, navigate to **Expense \> Expense report \> Open**.
 1. From the list, click any column heading menu (☰) and choose **Configure \> List Layout**.
- 
+
+    ![List](Images/107_NCAIM.png)
+
 1. Using the same method as earlier, select the following columns on the right.
     * Number
     * Opened by
@@ -634,49 +653,78 @@ Note, do not use the list refresh icon. You should see your new list layout take
     * Assigned to
     * Short description
 
-1. Click Save.
- 
+    ![List](Images/108_NCAIM.png)
+
+1. Click **Save**.
 1. Verify your work by inspecting the list layout as shown below:
- 
+
+    ![List](Images/109_NCAIM.png)
+
 ### Associate the Existing Items to an Expense Report
-1. In the classic UI, update the Opened by field from the Expense report list view by double-clicking on the table cell of the record (being careful not to click the link).
- 
- 
-1. Type the name Abel Tuter and click the green checkmark.
-Note: Abel Tuter matches the name on the expense item records imported earlier.
- 
-IMPORTANT: Make note of the expense report record number you updated!
+
+1. In the classic UI, update the _Opened by field_ from the _Expense report list view_ by **double-clicking** on the table cell of the record (being careful not to click the link).
+
+    ![List](Images/110_NCAIM.png)
+
+1. Type the name **Abel Tuter** and click the green checkmark.
+    > Note:  
+    Abel Tuter matches the name on the expense item records imported earlier.  
+    > **IMPORTANT**: Make note of the expense report record number you updated!
+
+    ![List](Images/111_NCAIM.png)
 
 1. Navigate to **Expense \> Item \> All**.
- 
-1. Hold down the shift-key and drag your cursor to select the records where the Expense report column displays (empty)
- 
-1. Double-click next to the word (empty) to edit multiple cells.
- 
-1. Enter the expense report number or use the magnifying glass ( ) to locate the record and click the green checkmark to save your results.
- 
+
+    ![List](Images/112_NCAIM.png)
+
+1. Hold down the **shift-key** and **drag your cursor** to select the records where the Expense report column displays _(empty)_.
+
+    ![List](Images/113_NCAIM.png)
+
+1. **Double-click** next to the word _(empty)_ to edit multiple cells.
+
+    ![List](Images/114_NCAIM.png)
+
+1. Enter the expense report number or use the magnifying glass (![List](Images/115_NCAIM.png)) to locate the record and click the green checkmark to save your results.
+
+    ![List](Images/116_NCAIM.png)
+
 1. Validate your work by navigating to **Expense \> Expense report \> Open**.
 1. Open the record you just added the items to.
- 
- 
+
+    ![List](Images/117_NCAIM.png)
+
 1. Verify your screen looks similar to the one below with the line items in the list.
- 
+
+    ![List](Images/118_NCAIM.png)
+
 ### Import a second Spreadsheet of Items
 
-1. Download the second Excel spreadsheet Expense_Report-Luke_Wilson.xlsx.
+1. Download the second Excel spreadsheet [Expense_Report-Luke_Wilson.xlsx](expense_report-luke_wilson.xlsx).
+
 1. In the classic UI, navigate to **Expense \> Item \> All**.
- 
-1. From the list, click any column heading menu (☰) and select Import.
- 
-1. On the screen that appears, uncheck Do you want to create an Excel template to enter data?.
-1. Click Choose File and navigate to the location where you saved your downloaded file.
- 
-1. Click Upload.
-1. When the upload is complete, click Preview Imported Data.
- 
+
+    ![List](Images/119_NCAIM.png)
+
+1. From the list, click any column heading menu (☰) and select **Import**.
+
+    ![List](Images/120_NCAIM.png)
+
+1. On the screen that appears, uncheck _Do you want to create an Excel template to enter data?_.
+1. Click **Choose File** and navigate to the location where you saved your downloaded file.
+
+    ![List](Images/121_NCAIM.png)
+
+1. Click **Upload**.
+1. When the upload is complete, click **Preview Imported Data**.
+
+    ![List](Images/122_NCAIM.png)
+
 1. Verify there are 4 rows of records imported and no errors or warnings.
-1. Click Complete Import.
- 
+1. Click **Complete Import**.
+
+    ![List](Images/123_NCAIM.png)
+
 1. Validate the records were imported to the Items table.
 1. Optionally, create a new expense report record for Luke Wilson and associate the new items to the Expense report.
 1. Does Luke's expense report show his imported items?
