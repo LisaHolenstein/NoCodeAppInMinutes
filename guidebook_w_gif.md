@@ -790,16 +790,13 @@ For the purpose of this lab, we will create a subflow with 2 approval steps. The
     ![Subflow](Images/133_NCAIM.png)
 
 1. Drag the **Data pill** "Task" from the Subflow Inputs on the right into the field "Record".
-
-    ![Subflow](Images/145_NCAIM.png)
-
 1. Set the **Rules** to "Approve or Reject" When: "Anyone approves or rejects".
 1. From the pill picker next to the approval conditions navigate to **Subflow Inputs \> Task \> Opened by \> Manager**.
-
-    ![Subflow](Images/146_NCAIM.png)
-
 1. Confirm with **Done**.
 1. (Optional) Add a comment "Manager Approval" to approval step.
+
+    ![Subflow](Images/001_NCAIM.gif)
+
 1. Click the **(+)** sign to add _Flow Logic_ to this subflow.
 1. Choose **If**.
 
