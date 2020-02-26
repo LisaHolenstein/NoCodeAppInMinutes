@@ -18,15 +18,15 @@ In this workshop you will improve the process by creating an application to mana
 
     * Google Play Store
 
-        ![Google Play Store](images/147_NCAIM.png)
+        ![Google Play Store](Images/147_NCAIM.png)
 
     * Apple App Store
 
-        ![Apple App Store](images/148_NCAIM.png)
+        ![Apple App Store](Images/148_NCAIM.png)
 
     You should see a screen like the following for the ServiceNow Agent app.
 
-    ![Install Agent app](images/149_NCAIM.png)
+    ![Install Agent app](Images/149_NCAIM.png)
 
 1. If prompted for access to location, camera, or sending notifications, click **Allow**.
 
@@ -295,23 +295,23 @@ The goal of this lab exercise is to define the user experience your app presents
 
 1. Provide the URL and a nickname for your instance.
 
-    ![Mobile](images/150_NCAIM.png)
+    ![Mobile](Images/150_NCAIM.png)
 
 1. Tap **Save and Login**
 
 1. Provide your admin userid and password used to login to your instance earlier and tap **Login**.
 
-    ![Mobile](images/151_NCAIM.png)
+    ![Mobile](Images/151_NCAIM.png)
 
 1. Tap **Allow** to enable access from your mobile device to your instance.
 
-    ![Mobile](images/152_NCAIM.png)
+    ![Mobile](Images/152_NCAIM.png)
 
 1. At the bottom of the screen, tap the **Expense** navigation tab.
 
 1. Tap **Expense report** to display the list of expense reports.
 
-    ![Mobile](images/153_NCAIM.png)
+    ![Mobile](Images/153_NCAIM.png)
 
 1. Tap around to see if your list of expense items is also available.
 
