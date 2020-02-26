@@ -1,20 +1,36 @@
 # From spreadsheet to no-code app in minutes
 
-Level: Basic
+Convert an existing expense report process from spreadsheets to a bespoke application in ServiceNow. You'll leave this lab all without writing a single piece of code!
 
-In this lab you will create a new application on the Now Platform from the ground up. You'll be guided through the process of what data you'll need, learning how to import data from a simple spreadsheet and configuring the experience – all without writing a single piece of code.
-You'll leave this lab having built your first fully functional application!
+Currently, expense items are put in a spreadsheet and emailed to accounts payable. This process is full of potential issues with data entry, lack of visibility, and inconsistent data entry by employees.
 
-Application/Capabilities:
+As the process owner, you need to improve the process. Your primary goals are to create a great user experience and improve data consistency for accurate future reports.
 
-* App Development
-* Now Platform
-* Process Automation
-* User Interface
-* Target Personas:
-* Beginning ServiceNow Developer
-* Builder
-* Pro Developer New to ServiceNow
+In this workshop you will improve the process by creating an application to manage expense reports and line items. You will also import legacy expense spreadsheets into your new app.
+
+*Note: The example application used in this workshop may not be applicable in your organization. However the concepts learned in these lab exercises are applicable to any application.*
+
+## Load the ServiceNow Agent application
+
+1. Use your mobile device to go to the [Apple Store](itms-apps://?action=discover&referrer=app-store) or [Google Play](https://play.google.com/store/apps).
+
+1. Download and install the **ServiceNow Agent** application. Use the following QR Codes from your mobile device for fast access.
+
+    * Google Play Store
+
+        ![Google Play Store](images/147_NCAIM.png)
+
+    * Apple App Store
+
+        ![Apple App Store](images/148_NCAIM.png)
+
+    You should see a screen like the following for the ServiceNow Agent app.
+
+    ![Install Agent app](images/149_NCAIM.png)
+
+1. If prompted for access to location, camera, or sending notifications, click **Allow**.
+
+    > Note: Do not log in to your instance yet. You will do that later when we test your mobile app.
 
 ## Getting Started
 
@@ -272,6 +288,34 @@ The goal of this lab exercise is to define the user experience your app presents
 1. Click **Done**.
 
     ![Classic](Images/045_NCAIM.png "Classic")
+
+## Test your mobile app
+
+1. On your mobile device, open the ServiceNow Agent app you downloaded earlier.
+
+1. Provide the URL and a nickname for your instance.
+
+    ![Mobile](images/150_NCAIM.png)
+
+1. Tap **Save and Login**
+
+1. Provide your admin userid and password used to login to your instance earlier and tap **Login**.
+
+    ![Mobile](images/151_NCAIM.png)
+
+1. Tap **Allow** to enable access from your mobile device to your instance.
+
+    ![Mobile](images/152_NCAIM.png)
+
+1. At the bottom of the screen, tap the **Expense** navigation tab.
+
+1. Tap **Expense report** to display the list of expense reports.
+
+    ![Mobile](images/153_NCAIM.png)
+
+1. Tap around to see if your list of expense items is also available.
+
+    >Q: What do you notice about the list of expense reports and items? A: The expense report and items are not "related" to each other yet. Yes, there's more we can do here, but in the interest of time we're going to stick with the desktop UI for now. Let the instructor know if you're interested in learning more about mobile development.
 
 ## Designing Your Form
 
