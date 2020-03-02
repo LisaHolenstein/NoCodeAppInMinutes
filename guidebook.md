@@ -311,7 +311,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
 1. Tap **Expense report** to display the list of expense reports.
 
-    ![Mobile](Images/153_NCAIM.png)
+    ![Mobile](Images/154_NCAIM.png)
 
 1. Tap around to see if your list of expense items is also available.
 
@@ -395,7 +395,7 @@ The goal of this lab exercise is to build the form for your application. You wil
     ![List](Images/056_NCAIM.png "List")
 
 1. Click **Create**.
-1. Select the _Approvers_ and ADD this to the selected using the arrow:
+1. Select _Item -\> Expense Report_ and the _Approvers_ and ADD both to the selected using the arrow:
 
     ![List](Images/057_NCAIM.png "List")
 
@@ -590,37 +590,13 @@ The approval subflow should already exist in your lab instance. If you're doing 
     ![Flow](Images/092_NCAIM.png)
 
 1. Refresh the flow history, review it and make sure you understand the steps.
+1. Click **Activate** and _Confirm Flow Activate_ to publish the Flow. Now it will run, whenever an Expense Report's status changes to _Approval_.
 
 ## Finishing Touches
 
 ### Goal
 
-The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item and expense report tables in workspace interface.
-
-### Add the Items List to the Classic UI Expense Report Form
-
-1. Back in _Studio_, click **Layout Form** on the _Expense report table definition_.
-
-    ![Form](Images/093_NCAIM.png)
-
-1. Scroll down the Available list on the left and locate the entry **Item -\> Expense report**.
-
-    ![Form](Images/094_NCAIM.png)
-
-1. Use the **\>** to move it to the Selected list on the right.
-
-    ![Form](Images/095_NCAIM.png)
-
-1. Now use the up and down arrows to place it between _Description_ and _Activities (filtered)_.
-
-    ![Form](Images/096_NCAIM.png)
-
-1. Click **Save**.
-1. Validate your work by going to the classic UI browser tab.
-1. Navigate to **Expense report \> Open**.
-1. Locate and click any record number in the list. Your form should appear similar to the following image.
-
-    ![Form](Images/097_NCAIM.png)
+The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item table in workspace interface.
 
 ### Configure Item Form Layout
 
@@ -644,6 +620,9 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
 ### Configure the Items List Layout in Workspace
 
 1. Next, let's clean up the default list layout for the items in _Workspace_. Begin by going to the _classic UI_ and navigating to **Workspace Experience -\> Agent Workspace Guided Setup -\> Lists -\> Create filtered lists**.
+1. Click **Get Started**.
+
+    ![Workspace](Images/155_NCAIM.png)
 
     ![Workspace](Images/100_NCAIM.png)
 
