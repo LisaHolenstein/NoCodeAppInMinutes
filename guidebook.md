@@ -267,7 +267,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
     ![Classic](Images/045_NCAIM.png "Classic")
 
-## Load the ServiceNow Agent application
+## Load the ServiceNow Agent application 
 
 1. Use your mobile device to go to the [Apple Store](itms-apps://?action=discover&referrer=app-store) or [Google Play](https://play.google.com/store/apps).
 
@@ -289,7 +289,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
 ## Test your mobile app
 
-1. On your mobile device, open the ServiceNow Agent app you downloaded earlier.
+1. On your mobile device, open the ServiceNow Agent app.
 
 1. Provide the URL and a nickname for your instance.
 
@@ -309,7 +309,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
 1. Tap **Expense report** to display the list of expense reports.
 
-    ![Mobile](Images/154_NCAIM.png)
+    ![Mobile](Images/153_NCAIM.png)
 
 1. Tap around to see if your list of expense items is also available.
 
@@ -320,6 +320,17 @@ The goal of this lab exercise is to define the user experience your app presents
 ### Goal
 
 The goal of this lab exercise is to build the form for your application. You will add the details of the form and list layout to the item and expense report tables in the classic interface.
+
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O100".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 ### Expense Report form Layout
 
@@ -393,7 +404,7 @@ The goal of this lab exercise is to build the form for your application. You wil
     ![List](Images/056_NCAIM.png "List")
 
 1. Click **Create**.
-1. Select _Item -\> Expense Report_ and the _Approvers_ and ADD both to the selected using the arrow:
+1. Select the _Approvers_ and ADD this to the selected using the arrow:
 
     ![List](Images/057_NCAIM.png "List")
 
@@ -438,7 +449,18 @@ The goal of this lab exercise is to build the form for your application. You wil
 
 The goal of this lab exercise is to create a simple workflow on your application. You will add create the trigger for the workflow, include the approval subflow, add a few actions, and test the workflow.
 
-1. In Studio Create New Application File, Flow and click **Create**.
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O101".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
+
+1. In Studio, click on **Create New Application File**, choose _Flow_ and click **Create**.
 
     ![Flow](Images/064_NCAIM.png)
 
@@ -588,13 +610,48 @@ The approval subflow should already exist in your lab instance. If you're doing 
     ![Flow](Images/092_NCAIM.png)
 
 1. Refresh the flow history, review it and make sure you understand the steps.
-1. Click **Activate** and _Confirm Flow Activate_ to publish the Flow. Now it will run, whenever an Expense Report's status changes to _Approval_.
 
 ## Finishing Touches
 
 ### Goal
 
-The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item table in workspace interface.
+The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item and expense report tables in workspace interface.
+
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O102".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
+
+### Add the Items List to the Classic UI Expense Report Form
+
+1. Back in _Studio_, click **Layout Form** on the _Expense report table definition_.
+
+    ![Form](Images/093_NCAIM.png)
+
+1. Scroll down the Available list on the left and locate the entry **Item -\> Expense report**.
+
+    ![Form](Images/094_NCAIM.png)
+
+1. Use the **\>** to move it to the Selected list on the right.
+
+    ![Form](Images/095_NCAIM.png)
+
+1. Now use the up and down arrows to place it between _Description_ and _Activities (filtered)_.
+
+    ![Form](Images/096_NCAIM.png)
+
+1. Click **Save**.
+1. Validate your work by going to the classic UI browser tab.
+1. Navigate to **Expense report \> Open**.
+1. Locate and click any record number in the list. Your form should appear similar to the following image.
+
+    ![Form](Images/097_NCAIM.png)
 
 ### Configure Item Form Layout
 
@@ -618,9 +675,6 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
 ### Configure the Items List Layout in Workspace
 
 1. Next, let's clean up the default list layout for the items in _Workspace_. Begin by going to the _classic UI_ and navigating to **Workspace Experience -\> Agent Workspace Guided Setup -\> Lists -\> Create filtered lists**.
-1. Click **Get Started**.
-
-    ![Workspace](Images/155_NCAIM.png)
 
     ![Workspace](Images/100_NCAIM.png)
 
@@ -661,6 +715,17 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
     ![Workspace](Images/104_NCAIM.png)
 
 ## Challenge exercises
+
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O103".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 ### Configure the Classic UI Expense Report List Layout
 
@@ -751,6 +816,17 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
 1. Validate the records were imported to the Items table.
 1. Optionally, create a new expense report record for Luke Wilson and associate the new items to the Expense report.
 1. Does Luke's expense report show his imported items?
+
+### Catching up
+
+If you want to see the full app, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O104".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 ### (OPTIONAL) Create Approval subflow
 
