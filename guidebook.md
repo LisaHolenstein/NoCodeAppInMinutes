@@ -267,7 +267,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
     ![Classic](Images/045_NCAIM.png "Classic")
 
-## Load the ServiceNow Agent application 
+## Load the ServiceNow Agent application
 
 1. Use your mobile device to go to the [Apple Store](itms-apps://?action=discover&referrer=app-store) or [Google Play](https://play.google.com/store/apps).
 
