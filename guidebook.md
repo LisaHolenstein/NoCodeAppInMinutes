@@ -10,28 +10,6 @@ In this workshop you will improve the process by creating an application to mana
 
 *Note: The example application used in this workshop may not be applicable in your organization. However the concepts learned in these lab exercises are applicable to any application.*
 
-## Load the ServiceNow Agent application
-
-1. Use your mobile device to go to the [Apple Store](itms-apps://?action=discover&referrer=app-store) or [Google Play](https://play.google.com/store/apps).
-
-1. Download and install the **ServiceNow Agent** application. Use the following QR Codes from your mobile device for fast access.
-
-    * Google Play Store
-
-        ![Google Play Store](Images/147_NCAIM.png)
-
-    * Apple App Store
-
-        ![Apple App Store](Images/148_NCAIM.png)
-
-    You should see a screen like the following for the ServiceNow Agent app.
-
-    ![Install Agent app](Images/149_NCAIM.png)
-
-1. If prompted for access to location, camera, or sending notifications, click **Allow**.
-
-    > Note: Do not log in to your instance yet. You will do that later when we test your mobile app.
-
 ## Getting Started
 
 ### Goal
@@ -288,6 +266,26 @@ The goal of this lab exercise is to define the user experience your app presents
 1. Click **Done**.
 
     ![Classic](Images/045_NCAIM.png "Classic")
+
+## Load the ServiceNow Agent application
+
+1. Use your mobile device to go to the [Apple Store](itms-apps://?action=discover&referrer=app-store) or [Google Play](https://play.google.com/store/apps).
+
+1. Download and install the **ServiceNow Agent** application. Use the following QR Codes from your mobile device for fast access.
+
+    * Google Play Store
+
+        ![Google Play Store](Images/147_NCAIM.png)
+
+    * Apple App Store
+
+        ![Apple App Store](Images/148_NCAIM.png)
+
+    You should see a screen like the following for the ServiceNow Agent app.
+
+    ![Install Agent app](Images/149_NCAIM.png)
+
+1. If prompted for access to location, camera, or sending notifications, click **Allow**.
 
 ## Test your mobile app
 
