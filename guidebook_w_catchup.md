@@ -321,6 +321,17 @@ The goal of this lab exercise is to define the user experience your app presents
 
 The goal of this lab exercise is to build the form for your application. You will add the details of the form and list layout to the item and expense report tables in the classic interface.
 
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O100".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
+
 ### Expense Report form Layout
 
 1. In Studio, use the Application Explorer on the left to navigate to **Data Model\> Tables\> Expense Report**.
@@ -437,6 +448,17 @@ The goal of this lab exercise is to build the form for your application. You wil
 ### Goal
 
 The goal of this lab exercise is to create a simple workflow on your application. You will add create the trigger for the workflow, include the approval subflow, add a few actions, and test the workflow.
+
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O101".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 1. In Studio, click on **Create New Application File**, choose _Flow_ and click **Create**.
 
@@ -595,6 +617,17 @@ The approval subflow should already exist in your lab instance. If you're doing 
 
 The goal of this lab exercise is to put the finishing touches on your application. You will add the details of the form and list layout to the item and expense report tables in workspace interface.
 
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O102".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
+
 ### Add the Items List to the Classic UI Expense Report Form
 
 1. Back in _Studio_, click **Layout Form** on the _Expense report table definition_.
@@ -682,6 +715,17 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
     ![Workspace](Images/104_NCAIM.png)
 
 ## Challenge exercises
+
+### Catching up
+
+If you want to get started on this part of the lab directly, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O103".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 ### Configure the Classic UI Expense Report List Layout
 
@@ -772,6 +816,17 @@ The goal of this lab exercise is to put the finishing touches on your applicatio
 1. Validate the records were imported to the Items table.
 1. Optionally, create a new expense report record for Luke Wilson and associate the new items to the Expense report.
 1. Does Luke's expense report show his imported items?
+
+### Catching up
+
+If you want to see the full app, please follow these instructions.
+
+1. In the classic UI, navigate to **System Update Sets \> Update Sets to Commit**.
+1. Open the record "Expense O104".
+1. Click on the button **Preview Update Set**.
+1. Wait for the form to reload.
+1. If there are no conflicts in the related list, click **Commit Update Set**.
+1. In Studio, click on **File \> Switch** and pick the _Expense_ application created on 2020-03-02.
 
 ### (OPTIONAL) Create Approval subflow
 
