@@ -309,7 +309,7 @@ The goal of this lab exercise is to define the user experience your app presents
 
 1. Tap **Expense report** to display the list of expense reports.
 
-    ![Mobile](Images/153_NCAIM.png)
+    ![Mobile](Images/154_NCAIM.png)
 
 1. Tap around to see if your list of expense items is also available.
 
